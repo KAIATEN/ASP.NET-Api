@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "http": {
+    "ApiSln.Development": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -17,6 +17,16 @@
       "applicationUrl": "http://localhost:5007",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "ApiSln.Production": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5008",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "IIS Express": {
