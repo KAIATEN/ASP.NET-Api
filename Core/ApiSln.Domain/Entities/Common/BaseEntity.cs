@@ -10,6 +10,6 @@ namespace ApiSln.Domain.Entities.Common
 	{
 		public Guid Id { get; set; }
 		public DateTime CreateDate { get; set; } = DateTime.Now;
-		public virtual DateTime ModifiedDate { get; set; }
+		public virtual DateTime? ModifiedDate { get; set; }
 	}
 }

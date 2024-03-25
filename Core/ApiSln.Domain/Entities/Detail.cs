@@ -12,13 +12,13 @@ namespace ApiSln.Domain.Entities
 		public Detail() { }
 		public Detail(string title, string description, Guid categoryId)
 		{
-			this.Title= title;
-			this.Description= description;
-			this.CategoryId= categoryId;
+			this.Title = title;
+			this.Description = description;
+			this.CategoryId = categoryId;
 		}
 		public required string Title { get; set; }
 		public required string Description { get; set; }
 		public required Guid CategoryId { get; set; }
-		public required Category Category { get; set; }
+		public Category Category { get; set; }
 	}
 }
