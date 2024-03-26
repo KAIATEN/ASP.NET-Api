@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Domain.Entities.Common
 {
-	internal interface IBaseEntity
+	public interface IBaseEntity
 	{
 	}
 }

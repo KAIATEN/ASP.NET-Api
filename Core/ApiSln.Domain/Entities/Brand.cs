@@ -17,7 +17,7 @@ namespace ApiSln.Domain.Entities
 		{
 			this.Name = name;
 		}
-		public required string Name { get; set; }
+		public string Name { get; set; }
 		public ICollection<Product> Products { get; set; }
 	}
 }

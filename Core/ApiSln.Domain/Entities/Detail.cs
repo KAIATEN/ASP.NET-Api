@@ -16,9 +16,9 @@ namespace ApiSln.Domain.Entities
 			this.Description = description;
 			this.CategoryId = categoryId;
 		}
-		public required string Title { get; set; }
-		public required string Description { get; set; }
-		public required Guid CategoryId { get; set; }
+		public string Title { get; set; }
+		public string Description { get; set; }
+		public Guid CategoryId { get; set; }
 		public Category Category { get; set; }
 	}
 }

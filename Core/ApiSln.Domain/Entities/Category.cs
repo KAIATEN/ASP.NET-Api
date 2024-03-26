@@ -19,9 +19,9 @@ namespace ApiSln.Domain.Entities
 			this.Name = name;
 			this.Priorty = priorty;
 		}
-		public required Guid ParentId { get; set; }
-		public required string Name { get; set; }
-		public required int Priorty { get; set; }
+		public Guid ParentId { get; set; }
+		public string Name { get; set; }
+		public int Priorty { get; set; }
 		public ICollection<Detail> Details { get; set; }
 		public ICollection<Product> Products { get; set; }
 	}

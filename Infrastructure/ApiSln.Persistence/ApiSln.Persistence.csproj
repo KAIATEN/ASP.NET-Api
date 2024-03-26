@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\ApiSln.Application\ApiSln.Application.csproj" />
     <ProjectReference Include="..\..\Core\ApiSln.Domain\ApiSln.Domain.csproj" />
   </ItemGroup>
 
