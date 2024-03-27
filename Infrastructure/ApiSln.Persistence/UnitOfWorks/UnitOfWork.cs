@@ -1,5 +1,5 @@
 ﻿using ApiSln.Application.Interfaces.Repositories;
-using ApiSln.Application.UnitOfWorks;
+using ApiSln.Application.Interfaces.UnitOfWorks;
 using ApiSln.Persistence.Context;
 using ApiSln.Persistence.Repositories;
 using System;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Persistence.UnitOfWorks
 {
-	public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
 	{
 		private readonly APIDbContext dbContext;
 

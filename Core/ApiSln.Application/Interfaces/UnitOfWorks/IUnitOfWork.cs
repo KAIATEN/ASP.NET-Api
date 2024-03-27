@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApiSln.Application.UnitOfWorks
+namespace ApiSln.Application.Interfaces.UnitOfWorks
 {
 	public interface IUnitOfWork : IAsyncDisposable
 	{

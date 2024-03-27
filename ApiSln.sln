@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{7509E6AD-CAC1-47A1-B825-6CB111B32B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Application", "Core\ApiSln.Application\ApiSln.Application.csproj", "{7B774D0A-EDB0-4971-ACC5-8F375E52F64A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSln.Application", "Core\ApiSln.Application\ApiSln.Application.csproj", "{7B774D0A-EDB0-4971-ACC5-8F375E52F64A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Domain", "Core\ApiSln.Domain\ApiSln.Domain.csproj", "{FCF4D569-0F2F-4B89-B75F-3318FA4AF1D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSln.Domain", "Core\ApiSln.Domain\ApiSln.Domain.csproj", "{FCF4D569-0F2F-4B89-B75F-3318FA4AF1D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Infrastructure", "Infrastructure\ApiSln.Infrastructure\ApiSln.Infrastructure.csproj", "{0FD8B279-2664-43C6-A899-886D8C7F5809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSln.Infrastructure", "Infrastructure\ApiSln.Infrastructure\ApiSln.Infrastructure.csproj", "{0FD8B279-2664-43C6-A899-886D8C7F5809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Persistence", "Infrastructure\ApiSln.Persistence\ApiSln.Persistence.csproj", "{7139E6D5-4A6B-4B8F-BCD0-2556DA95FE89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSln.Persistence", "Infrastructure\ApiSln.Persistence\ApiSln.Persistence.csproj", "{7139E6D5-4A6B-4B8F-BCD0-2556DA95FE89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Api", "Presentation\ApiSln.Api\ApiSln.Api.csproj", "{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSln.Api", "Presentation\ApiSln.Api\ApiSln.Api.csproj", "{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSln.Mapper", "Core\ApiSln.Mapper\ApiSln.Mapper.csproj", "{D97653BE-4738-416E-B3D1-3C9AA0709BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D97653BE-4738-416E-B3D1-3C9AA0709BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D97653BE-4738-416E-B3D1-3C9AA0709BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D97653BE-4738-416E-B3D1-3C9AA0709BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D97653BE-4738-416E-B3D1-3C9AA0709BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{0FD8B279-2664-43C6-A899-886D8C7F5809} = {69F92044-F7EE-4112-ACC0-7678CE941F61}
 		{7139E6D5-4A6B-4B8F-BCD0-2556DA95FE89} = {69F92044-F7EE-4112-ACC0-7678CE941F61}
 		{71A84B8B-7BD7-4BB7-B4EB-2B6404CC58B1} = {7509E6AD-CAC1-47A1-B825-6CB111B32B9C}
+		{D97653BE-4738-416E-B3D1-3C9AA0709BB2} = {788D059D-0D35-4198-931C-86253EFDF1E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2DCA457-B4B3-43CB-B344-40133F058C29}

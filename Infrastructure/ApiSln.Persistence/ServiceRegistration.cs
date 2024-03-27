@@ -1,5 +1,5 @@
 ﻿using ApiSln.Application.Interfaces.Repositories;
-using ApiSln.Application.UnitOfWorks;
+using ApiSln.Application.Interfaces.UnitOfWorks;
 using ApiSln.Persistence.Context;
 using ApiSln.Persistence.Repositories;
 using ApiSln.Persistence.UnitOfWorks;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Persistence
 {
-	public static class ServiceRegistration
+    public static class ServiceRegistration
 	{
 		public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
 		{
