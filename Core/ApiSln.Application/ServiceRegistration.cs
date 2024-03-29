@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ApiSln.Application.Exceptions;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace ApiSln.Application
 		{
 			var assembly = Assembly.GetExecutingAssembly();
 			services.AddMediatR(configuration => configuration.RegisterServicesFromAssemblies(assembly));
+			services.AddTransient<ExceptionMiddleware>();
 		}
 	}
 }
