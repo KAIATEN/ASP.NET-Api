@@ -35,6 +35,11 @@ namespace ApiSln.Persistence.Repositories
 			await Task.Run(() => Table.Remove(entity));
 		}
 
+		public async Task DeleteRangeAsync(IList<T> entity)
+		{
+			await Task.Run(() => Table.RemoveRange(entity));
+		}
+
 		public async Task<T> UpdateAsync(T entity)
 		{
 			await Task.Run(() => Table.Update(entity));
