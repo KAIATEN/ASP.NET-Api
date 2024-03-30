@@ -40,7 +40,6 @@ namespace ApiSln.Application.Exceptions
 			List<string> errors = new()
 			{
 				exception.Message,
-				exception.InnerException?.ToString(),
 			};
 			return httpContext.Response.WriteAsync(new ExceptionModel
 			{
