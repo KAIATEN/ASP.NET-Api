@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Application.Bases
 {
-	public class BaseExcepitons : ApplicationException
+	public class BaseExcepiton : ApplicationException
 	{
-		public BaseExcepitons()
+		public BaseExcepiton()
 		{
 
 		}
-		public BaseExcepitons(string message) : base(message)
+		public BaseExcepiton(string message) : base(message)
 		{
 
 		}

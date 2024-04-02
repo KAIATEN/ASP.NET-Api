@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Application.Features.Products.Exceptions
 {
-	public class ProductTitleMustNotBeSameException : BaseExcepitons
+	public class ProductTitleMustNotBeSameException : BaseExcepiton
 	{
 		public ProductTitleMustNotBeSameException() : base("Ürün başlığı zaten var.")
 		{

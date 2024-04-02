@@ -1,7 +1,10 @@
-﻿using ApiSln.Application.Features.Products.Rules;
+﻿using ApiSln.Application.Bases;
+using ApiSln.Application.Features.Products.Rules;
+using ApiSln.Application.Interfaces.AutoMapper;
 using ApiSln.Application.Interfaces.UnitOfWorks;
 using ApiSln.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +13,12 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Application.Features.Products.Commands.CreateProduct
 {
-	public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest, Unit>
+	public class CreateProductCommandHandler : BaseHandler, IRequestHandler<CreateProductCommandRequest, Unit>
 	{
-		private readonly IUnitOfWork unitOfWork;
 		private readonly ProductRules productRules;
 
-		public CreateProductCommandHandler(IUnitOfWork unitOfWork, ProductRules productRules)
+		public CreateProductCommandHandler(ProductRules productRules, IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
 		{
-			this.unitOfWork = unitOfWork;
 			this.productRules = productRules;
 		}
 		public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
