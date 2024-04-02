@@ -1,5 +1,6 @@
 ﻿using ApiSln.Application.Interfaces.Repositories;
 using ApiSln.Application.Interfaces.UnitOfWorks;
+using ApiSln.Domain.Entities;
 using ApiSln.Persistence.Context;
 using ApiSln.Persistence.Repositories;
 using ApiSln.Persistence.UnitOfWorks;
@@ -14,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Persistence
 {
-    public static class ServiceRegistration
+	public static class ServiceRegistration
 	{
 		public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
 		{
@@ -22,6 +23,16 @@ namespace ApiSln.Persistence
 			services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
 			services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+			services.AddIdentityCore<User>(opt =>
+			{
+				opt.Password.RequireNonAlphanumeric = false;
+				opt.Password.RequiredLength = 2;
+				opt.Password.RequireLowercase = false;
+				opt.Password.RequireUppercase = false;
+				opt.Password.RequireDigit = false;
+				opt.SignIn.RequireConfirmedEmail = false;
+			}).AddRoles<Role>().AddEntityFrameworkStores<APIDbContext>();
 		}
 	}
 }

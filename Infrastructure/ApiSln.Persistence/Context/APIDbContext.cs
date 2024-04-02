@@ -1,4 +1,5 @@
 ﻿using ApiSln.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiSln.Persistence.Context
 {
-	public class APIDbContext : DbContext
+	public class APIDbContext : IdentityDbContext<User, Role, Guid>
 	{
 		public APIDbContext()
 		{
