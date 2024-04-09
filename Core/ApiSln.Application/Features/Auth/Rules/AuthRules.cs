@@ -19,5 +19,21 @@ namespace ApiSln.Application.Features.Auth.Rules
 			}
 			return Task.CompletedTask;
 		}
+		public Task EmailOrPasswordShouldNotBeInvalid(User? user, bool checkPassword)
+		{
+			if (user is null || !checkPassword)
+			{
+				throw new EmailOrPasswordShouldNotBeInvalidException();
+			}
+			return Task.CompletedTask;
+		}
+		public Task RefreshTokenShouldNotBeExpired(DateTime? refreshTokenExpiryTime)
+		{
+			if (refreshTokenExpiryTime <= DateTime.Now)
+			{
+				throw new RefreshTokenShouldNotBeExpired();
+			}
+			return Task.CompletedTask;
+		}
 	}
 }

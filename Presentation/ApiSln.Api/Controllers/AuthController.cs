@@ -1,4 +1,6 @@
-﻿using ApiSln.Application.Features.Auth.Commands.Register;
+﻿using ApiSln.Application.Features.Auth.Commands.Login;
+using ApiSln.Application.Features.Auth.Commands.RefreshToken;
+using ApiSln.Application.Features.Auth.Commands.Register;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +22,18 @@ namespace ApiSln.Api.Controllers
 		{
 			await mediator.Send(registerCommandRequest);
 			return StatusCode(StatusCodes.Status201Created);
+		}
+		[HttpPost]
+		public async Task<IActionResult> Login(LoginCommandRequest loginCommandRequest)
+		{
+			var response = await mediator.Send(loginCommandRequest);
+			return StatusCode(StatusCodes.Status200OK, response);
+		}
+		[HttpPost]
+		public async Task<IActionResult> RefreshToken(RefreshTokenCommandRequest refreshTokenCommandRequest)
+		{
+			var response = await mediator.Send(refreshTokenCommandRequest);
+			return StatusCode(StatusCodes.Status200OK, response);
 		}
 	}
 }
