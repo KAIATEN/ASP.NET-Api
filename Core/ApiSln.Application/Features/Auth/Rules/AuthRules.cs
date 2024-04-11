@@ -31,7 +31,15 @@ namespace ApiSln.Application.Features.Auth.Rules
 		{
 			if (refreshTokenExpiryTime <= DateTime.Now)
 			{
-				throw new RefreshTokenShouldNotBeExpired();
+				throw new RefreshTokenShouldNotBeExpiredException();
+			}
+			return Task.CompletedTask;
+		}
+		public Task EmailAddressShouldBeValid(User? user)
+		{
+			if (user is null)
+			{
+				throw new EmailAddressShouldBeValidException();
 			}
 			return Task.CompletedTask;
 		}
